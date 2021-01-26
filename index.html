@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
     <link href="/CatEnergy/css/normalize.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../CatEnergy/css/style.css" rel="stylesheet" />
   </head>
 
   <body class="page__body">
@@ -15,7 +15,7 @@
       <header class="page-header">
         <div class="page-header__wrapper main-nav--closed">
           <a class="page-header__logo">
-            <img src="/CatEnergyMobile/img/logo-mobile.svg" style="width: 227px" alt="Кэт-энерджи" />
+            <img src="../img/logo-mobile.svg" style="width: 227px" alt="Кэт-энерджи" />
           </a>
           <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню </span>
@@ -39,15 +39,9 @@
           <h1 class="promo__title">Функциональное <br />питание для котов</h1>
           <h2 class="promo__text">Занялся собой? Займись котом!</h2>
           <picture>
-            <source
-              media="(min-width: 1300px)"
-              srcset="/CatEnergy/img/index-can-desktop@1x.png 1x, /CatEnergy/img/index-can-desktop@2x.png 2x"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="/CatEnergy/img/index-can-tablet@1x.jpg 1x, /CatEnergy/img/index-can-tablet@2x.jpg 2x"
-            />
-            <img class="promo-icon" src="/CatEnergy/img/index-can-mobile@1x.png" alt="" />
+            <source media="(min-width: 1300px)" srcset="../img/index-can-desktop@1x.png 1x, ../img/index-can-desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="../img/index-can-tablet@1x.jpg 1x, ../img/index-can-tablet@2x.jpg 2x" />
+            <img class="promo-icon" src="../img/index-can-mobile@1x.png" alt="" />
           </picture>
           <button class="promo__programm button" type="button">подобрать программу</button>
         </div>
@@ -59,7 +53,7 @@
         <div class="programm__wrapper">
           <div class="programm-block">
             <div class="programm-block__icon">
-              <img class="programm-icon" style="height: 53px; width: 50px" src="/CatEnergy/img/icon-cat-slim.svg" alt="svg" />
+              <img class="programm-icon" style="height: 53px; width: 50px" src="../img/icon-cat-slim.svg" alt="svg" />
             </div>
             <h2 class="programm-block__title">похудение</h2>
             <p class="programm-block__text">
@@ -68,13 +62,18 @@
             </p>
             <a class="programm__link" href="#"
               >Каталог slim
-              <img style="height: 19px; width: 32px" src="/CatEnergy/img/icon-right-arrow-long.svg" alt="svg" />
+              <img style="height: 19px; width: 32px" src="../img/icon-right-arrow-long.svg" alt="svg" />
             </a>
           </div>
 
           <div class="programm-block">
             <div class="programm-block__icon">
-              <img class="programm-icon" style="height: 50px; width: 67px" src="/CatEnergy/img/icon-cat-pro.svg" alt="svg" />
+              <img
+                class="programm-icon"
+                style="height: 50px; width: 67px"
+                src="../CatEnergy/img/icon-right-arrow-long.svg"
+                alt="svg"
+              />
             </div>
             <h2 class="programm-block__title">набор массы</h2>
             <p class="programm-block__text">
@@ -84,7 +83,7 @@
 
             <a class="programm__link" href="#"
               >каталог pro
-              <img style="height: 19px; width: 32px" src="/CatEnergy/img/icon-right-arrow-long.svg" alt="svg" />
+              <img style="height: 19px; width: 32px" src="../img/icon-right-arrow-long.svg" alt="svg" />
             </a>
           </div>
         </div>
@@ -95,22 +94,22 @@
         <div class="Howitworks__wrapper">
           <ul class="Howitworks__list">
             <li class="Howitworks__item">
-              <img class="Howitworks__icon" src="/CatEnergy/img/Group 1.svg" alt="svg" />
+              <img class="Howitworks__icon" src="../img/Group 1.svg" alt="svg" />
               <p class="Howitworks__text">Функциональное питание содержит только полезные питательные вещества.</p>
               <p class="Howitworks__numeral">1</p>
             </li>
             <li class="Howitworks__item">
-              <img class="Howitworks__icon" src="/CatEnergy/img/Group 2.svg" alt="svg" />
+              <img class="Howitworks__icon" src="../img/Group 2.svg" alt="svg" />
               <p class="Howitworks__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
               <p class="Howitworks__numeral">2</p>
             </li>
             <li class="Howitworks__item">
-              <img class="Howitworks__icon" src="/CatEnergy/img/Group 3.svg" alt="svg" />
+              <img class="Howitworks__icon" src="../img/Group 3.svg" alt="svg" />
               <p class="Howitworks__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
               <p class="Howitworks__numeral">3</p>
             </li>
             <li class="Howitworks__item">
-              <img class="Howitworks__icon" src="/CatEnergy/img/Group 4.svg" alt="svg" />
+              <img class="Howitworks__icon" src="../img/Group 4.svg" alt="svg" />
               <p class="Howitworks__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
               <p class="Howitworks__numeral">4</p>
             </li>
@@ -279,7 +278,7 @@
         </div>
       </footer>
     </main>
-    <script src="/CatEnergy/js/MobileMenu.js"></script>
-    <script src="/CatEnergy/js/click.js"></script>
+    <script src="../js/MobileMenu.js"></script>
+    <script src="../js/click.js"></script>
   </body>
 </html>
