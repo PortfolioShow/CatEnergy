@@ -277,7 +277,7 @@ img {
 
 .promo {
   @media (max-width: $mobile-width-only) {
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("/img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: 100% 305px;
     background-position: center top;
@@ -766,13 +766,13 @@ legend,
 
 .image--before {
   z-index: 20;
-  background-image: url("../img/before-desktop@1x.png");
+  background-image: url("/img/before-desktop@1x.png");
   background-position-x: -15px;
   background-position-y: 4px;
 
   @media (min-width: $tablet-width) {
     z-index: 20;
-    background-image: url(../img/before-desktop@1x.png);
+    background-image: url("/img/before-desktop@1x.png");
     background-position-x: -82px;
     background-position-y: 4px;
   }
