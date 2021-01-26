@@ -420,6 +420,7 @@ img {
   height: 53px;
   border-radius: 50%;
   background-color: #68b738;
+  display: flex;
 
   @media (min-width: $tablet-width) {
     width: 202px;
@@ -443,7 +444,9 @@ img {
     margin: 0;
   }
 }
-
+.programm-icon {
+  width: inherit;
+}
 .programm-block__title {
   margin-left: 20px;
   font-style: normal;
