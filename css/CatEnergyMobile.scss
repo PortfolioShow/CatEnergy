@@ -53,7 +53,6 @@ img {
   text-transform: uppercase;
   cursor: pointer;
 
-
   @media (max-width: $mobile-width-only) {
     height: 40px;
     width: 280px;
@@ -77,19 +76,16 @@ img {
   color: #000000;
 }
 
-
-
-  .page-header__container {
-    min-width: 320px;
-    // height: 696px;
-    @media (min-width: $desktop-width) {
+.page-header__container {
+  min-width: 320px;
+  // height: 696px;
+  @media (min-width: $desktop-width) {
     margin: 0 auto;
-    background-image: url("/CatEnergy/img/index-background-desktop@1x.jpg");
+    background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: right; /* позиционир справа */
     background-size: contain;
     background-size: 720px 100%;
-    
   }
 }
 
@@ -125,7 +121,6 @@ img {
 .page-header__logo img {
   width: 226px; //размеры лого по макету мобайл
   height: 85px;
-
 }
 
 .page-header__toggle {
@@ -215,14 +210,12 @@ img {
   }
 }
 
-
 .main-nav__wrapper {
   display: flex;
 
   @media (max-width: $mobile-width-only) {
-
-  animation-name: bounce;
-  animation-duration: 0.8s; //задержка появления формы
+    animation-name: bounce;
+    animation-duration: 0.8s; //задержка появления формы
   }
 }
 
@@ -284,7 +277,7 @@ img {
 
 .promo {
   @media (max-width: $mobile-width-only) {
-    background-image: url("/CatEnergy/img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: 100% 305px;
     background-position: center top;
@@ -400,12 +393,12 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
     display: block;
     position: relative;
-   padding: 49px 40px 32px 32px;
+    padding: 49px 40px 32px 32px;
     margin-top: 28px;
     margin-bottom: 0;
   }
@@ -773,13 +766,13 @@ legend,
 
 .image--before {
   z-index: 20;
-  background-image: url(/CatEnergy/img/before-desktop@1x.png);
+  background-image: url("../img/before-desktop@1x.png");
   background-position-x: -15px;
   background-position-y: 4px;
 
   @media (min-width: $tablet-width) {
     z-index: 20;
-    background-image: url(/CatEnergy/img/before-desktop@1x.png);
+    background-image: url(../img/before-desktop@1x.png);
     background-position-x: -82px;
     background-position-y: 4px;
   }
