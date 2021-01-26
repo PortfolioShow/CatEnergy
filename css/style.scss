@@ -72,6 +72,7 @@ img {
 }
 
 .page__body {
+  min-width: 390px;
   margin: 0;
   color: #000000;
 }
@@ -81,7 +82,7 @@ img {
   // height: 696px;
   @media (min-width: $desktop-width) {
     margin: 0 auto;
-    background-image: url("/Users/VsCode/Documents/GitHub/CatEnergy/img/index-background-desktop@1x.jpg");
+    background-image: url("/img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: right; /* позиционир справа */
     background-size: contain;
@@ -415,6 +416,8 @@ img {
 
 .programm-block__icon {
   text-align: center;
+  width: 53px;
+  height: 53px;
   border-radius: 50%;
   background-color: #68b738;
 
@@ -592,13 +595,18 @@ img {
 }
 
 .LiveExample__block {
-  min-width: 390px;
+  //margin-right: 20px;
+
   @media (min-width: $desktop-width) {
     display: flex;
   }
 }
 
 .LiveExample__wrapper {
+  margin-right: 20px;
+  /* outline: 1px solid green;
+  outline-offset: -4px; */
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -659,7 +667,11 @@ img {
   }
 }
 .LiveExample__fieldset-left {
-  margin-right: 42px;
+  margin-right: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 42px;
+  }
 }
 
 .LiveExample__expenses {
@@ -688,12 +700,16 @@ img {
     color: #000000;
   }
 }
-
 .LiveExample__fieldset-container {
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 fieldset {
@@ -766,13 +782,13 @@ legend,
 
 .image--before {
   z-index: 20;
-  background-image: url("/img/before-desktop@1x.png");
+  background-image: url(../img/before-mobile@1x.png);
   background-position-x: -15px;
   background-position-y: 4px;
 
   @media (min-width: $tablet-width) {
     z-index: 20;
-    background-image: url(../img/before-desktop@1x.png);
+    background-image: url(../img/before-tablet@1x.png);
     background-position-x: -82px;
     background-position-y: 4px;
   }
@@ -783,7 +799,7 @@ legend,
   left: auto;
   right: 0;
   z-index: 10;
-  background-image: url(../img/after-tablet@1x.png);
+  background-image: url(../img/after-mobile@1x.png);
   background-position-x: -5px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
