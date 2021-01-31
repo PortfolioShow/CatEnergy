@@ -122,6 +122,13 @@ img {
 .page-header__logo img {
   width: 226px; //размеры лого по макету мобайл
   height: 85px;
+  &:hover {
+    //измен цвета при наведении
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__toggle {
@@ -259,6 +266,14 @@ img {
   border-top: 1px solid #e6e6e6; // полоски вдавленности
   border-bottom: 1px solid #e6e6e6;
 
+  &:hover {
+    //измен цвета при наведении
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     border-top: none; // полоски вдавленности
     border-bottom: none;
@@ -395,6 +410,7 @@ img {
   flex-direction: row;
   align-items: center;
   background-color: #f2f2f2;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -414,27 +430,43 @@ img {
   }
 }
 
-.programm-block__icon {
+.programm-block__pro,
+.programm-block__slim {
+  //position: relative;
   text-align: center;
   width: 53px;
   height: 53px;
-  border-radius: 50%;
-  background-color: #68b738;
+  // border-radius: 50%;
+  //background-color: #68b738;
   display: flex;
-
-  @media (min-width: $tablet-width) {
+}
+@media (min-width: $tablet-width) {
+  .programm-block__slim {
     width: 202px;
     height: 202px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -14px;
     bottom: 0;
     left: 0;
     margin: auto;
     margin-right: 62px;
   }
+  .programm-block__pro {
+    width: 268px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: -42px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-right: 62px;
+  }
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .programm-block__slim {
     order: inherit;
     position: relative;
     top: 0;
@@ -443,10 +475,75 @@ img {
     height: 100px;
     margin: 0;
   }
+  .programm-block__pro {
+    order: inherit;
+    position: relative;
+    top: 0;
+    left: -16px;
+    width: 134px;
+    height: 100px;
+    margin: 0;
+  }
 }
-.programm-icon {
-  width: inherit;
+
+.icon__slim {
+  position: absolute;
+  width: 67px;
+  height: 50px;
+  left: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 140px;
+    height: 192px;
+    left: 39px;
+  }
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 70px;
+    height: 97px;
+    left: 18px;
+  }
 }
+.icon__pro {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  left: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 268px;
+    height: 200px;
+    left: -6px;
+  }
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 134px;
+    height: 100px;
+    left: -6px;
+  }
+}
+
+.programm-block__circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #68b738;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .programm-block__title {
   margin-left: 20px;
   font-style: normal;
@@ -496,6 +593,13 @@ img {
   line-height: 30px;
   text-decoration: none;
   text-transform: uppercase;
+  &:hover {
+    //измен цвета при наведении
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .Howitworks {
