@@ -9,6 +9,11 @@ img {
   height: auto;
 }
 
+//убирает подсветку во всех браузерах на input, select, button, a
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
 //-------------------------------
 
 @keyframes bounce {

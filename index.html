@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CatEnergyMobile</title>
+    <title>IndexCatEnergyMobile</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
     <link href="/css/normalize.css" rel="stylesheet" />
@@ -28,7 +28,7 @@
               <!-- main-nav__list для позиционир site-list для эл-ов меню-->
               <li class="site-list__item site-list__item--active"><a href="/CatEnergyMobile.html">ГЛАВНАЯ</a></li>
               <li class="site-list__item"><a href="/Catalog.html"> каталог продукции</a></li>
-              <li class="site-list__item"><a href="#"> подбор программы </a></li>
+              <li class="site-list__item"><a href="Form.html"> подбор программы </a></li>
             </ul>
           </div>
         </nav>
@@ -43,8 +43,11 @@
             <source media="(min-width: 768px)" srcset="/img/index-can-tablet@1x.jpg 1x, /img/index-can-tablet@2x.jpg 2x" />
             <img class="promo-icon" src="/img/index-can-mobile@1x.png" alt="" />
           </picture>
-          <button class="promo__programm button" type="button">подобрать программу</button>
-        </div>
+          <form action="Form.html" method="GET">
+          <button class="promo__programm button" type="submit">подобрать программу</button> 
+        </form>
+
+      </div>
       </section>
     </div>
 

@@ -28,7 +28,7 @@
               <!-- main-nav__list для позиционир site-list для эл-ов меню-->
               <li class="site-list__item site-list__item--active"><a href="/index.html">ГЛАВНАЯ</a></li>
               <li class="site-list__item"><a href="/Catalog.html"> каталог продукции</a></li>
-              <li class="site-list__item"><a href="#"> подбор программы </a></li>
+              <li class="site-list__item"><a href="Form.html"> подбор программы </a></li>
             </ul>
           </div>
         </nav>
@@ -65,11 +65,11 @@
                   </tr>
                 </table>
               </div>
-            <!-- <div class="productCard__wrapper"> -->
-
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
-            <!-- </div> -->
-
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
+            </div>
             </div>
 
             <div class="productCard">
@@ -98,7 +98,11 @@
                   </tr>
                 </table>
               </div>
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
+              </div>
             </div>
 
             <div class="productCard">
@@ -127,8 +131,12 @@
                   </tr>
                 </table>
               </div>
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
             </div>
+          </div>
 
             <div class="productCard">
               <div class="productCard__img">
@@ -156,7 +164,11 @@
                   </tr>
                 </table>
               </div>
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
+            </div>
             </div>
             <div class="productCard">
               <div class="productCard__img">
@@ -184,7 +196,11 @@
                   </tr>
                 </table>
               </div>
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
+            </div>
             </div>
             <div class="productCard">
               <div class="productCard__img">
@@ -212,7 +228,11 @@
                   </tr>
                 </table>
               </div>
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
+            </div>
             </div>
             <div class="productCard">
               <div class="productCard__img">
@@ -240,9 +260,13 @@
                   </tr>
                 </table>
               </div>
-              <button class="productCard__button button" type="button" wfd-id="56">заказать</button>
-            </div>
+              <div class="productCard-button__container">
+                <form action="Form.html" method="GET">
 
+              <button class="productCard-button button" type="submit" >заказать</button>
+                </form>
+            </div>
+            </div>
             <div class="lastCcard"> <!-- productCard__frame-last -->
               <div class="lastCcard__frame"> <!-- productCard__last -->
                 <div class="lastCcard__plus"> <!-- productCard__last-plus -->
@@ -250,74 +274,71 @@
                 </div>
                 <h2 class="lastCcard__title">Показать еще 100500 товаров</h2> <!-- productCard__title -->
                 <p class="lastCcard__text">На самом деле вкусов гораздо больше!</p> <!-- productCard__text -->
-                <button class="productCard__button-last button" type="button" wfd-id="56">Показать все</button>
+                <button class="lastCard__button button" type="button" >Показать все</button>
               </div>
             </div>
           </div>
+
         </div>
       </section>
       <section class="additional-goods">
         <div class="additional__title-line">
-
         <div class="additional__title">
           <h2 class="additional-goods__title">Дополнительные товары</h2>
-
       </div>
       </div>
+      <div class="additional-goods__wrapper">
         <div class="additional-goods__container">
-
           <div class="additional-goods__block">
-
-            <div class="additional-goods__wrapper">
+            <div class="additional-goods__row">
               <div class="additional-goods__product">
                 <h3 class="additional-goods__product-title">Сахарозаменитель</h3>
                 <p class="additional-goods__product-packing">1 упаковка (100 г)</p>
                 <p class="additional-goods__product-price">200 Р</p>
               </div>
-              <button class="additional-goods__button button" type="button" wfd-id="56">заказать</button>
+              <form action="Form.html" method="GET">
+              <button class="additional-goods__button button" type="submit">заказать</button>
+              </form>
             </div>
 
-            <div class="additional-goods__wrapper">
+            <div class="additional-goods__row">
               <div class="additional-goods__product">
                 <h3 class="additional-goods__product-title">Питьевая вода</h3>
                 <p class="additional-goods__product-packing">5 литров</p>
                 <p class="additional-goods__product-price">50 Р</p>
               </div>
-              <button class="additional-goods__button button" type="button" wfd-id="56">заказать</button>
-            </div>
+              <form action="Form.html" method="GET">
+              <button class="additional-goods__button button" type="submit">заказать</button>
+            </form>
+          </div>
 
-            <div class="additional-goods__wrapper">
+            <div class="additional-goods__row">
               <div class="additional-goods__product">
                 <h3 class="additional-goods__product-title">молоко</h3>
                 <p class="additional-goods__product-packing">1 литр</p>
                 <p class="additional-goods__product-price">100 Р</p>
               </div>
-              <button class="additional-goods__button button" type="button" wfd-id="56">заказать</button>
-            </div>
+              <form action="Form.html" method="GET">
+              <button class="additional-goods__button button" type="submit">заказать</button>
+            </form>
+          </div>
 
-            <div class="additional-goods__wrapper">
+            <div class="additional-goods__row">
               <div class="additional-goods__product">
                 <h3 class="additional-goods__product-title">витамины</h3>
                 <p class="additional-goods__product-packing">1 упаковка (30 г)</p>
                 <p class="additional-goods__product-price">300 Р</p>
               </div>
-              <button class="additional-goods__button button" type="button" wfd-id="56">заказать</button>
+              <form action="Form.html" method="GET">
+              <button class="additional-goods__button button" type="submit">заказать</button>
+              </form>
             </div>
           </div>
           <div class="additional-goods__promo">
             <svg class="additional-goods__promo-icon" width="80"
-              height="80"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 55.5 60"
-              style="enable-background: new 0 0 55.5 60"
-              xml:space="preserve"
-            >
-              <path
+              height="80" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.5 60" style="enable-background: new 0 0 55.5 60"
+              xml:space="preserve"> <path
                 d="M52.3,12.2h-7c0.5-0.7,0.8-1.4,1.1-2.2c0.6-2,0.4-4.1-0.6-5.9c-1-1.8-2.6-3.1-4.6-3.7c-2-0.6-4.1-0.4-5.9,0.6
             c-3.6,2-6.2,6.1-7.6,9c-1.4-2.9-4-7.1-7.6-9c-3.8-2-8.5-0.6-10.5,3.1c-1.4,2.7-1.2,5.8,0.5,8.1h-7c-1.7,0-3.1,1.4-3.1,3.1v9.4
             c0,1.7,1.4,3.1,3.1,3.1H4v26.1c0,3.3,2.7,6,6,6h35.5c3.3,0,6-2.7,6-6V27.8h0.8c1.7,0,3.1-1.4,3.1-3.1v-9.4
@@ -333,6 +354,7 @@
             <p class="additional-goods__promo-text">Закажите все и получите чехол для кота в подарок!</p>
           </div>
         </div>
+      </div>
       </section>
 
       <section class="invitation">
@@ -352,12 +374,7 @@
             </div>
           </div>
           <div class="invitation__map">
-            <script
-              type="text/javascript"
-              charset="utf-8"
-              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;apikey=<API-ключ>"
-            ></script>
-            <!--  <img class="invitation__map" src="/img/bg-map-desktop@1x.png" alt="" /> -->
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A452dbc38730a913aa5d3930e5462f9c29b3d256caca895e3567325ccea1163ea&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>            <!--  <img class="invitation__map" src="/img/bg-map-desktop@1x.png" alt="" /> -->
           </div>
         </div>
       </section>
