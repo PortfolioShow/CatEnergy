@@ -57,15 +57,13 @@ img {
   line-height: 0px;
   text-transform: uppercase;
   cursor: pointer;
-
-  @media (max-width: $mobile-width-only) {
-    height: 40px;
-    width: 280px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+ 
+  &:hover {
+    background: #5EAA2F;
   }
+ &:active {
+  color: rgba(255, 255, 255, 0.3);
+ }
 }
 
 .page {
@@ -252,6 +250,9 @@ img {
   }
 }
 
+
+
+
 .site-list a {
   //стили для кнопок мобильного меню
   position: relative;
@@ -267,9 +268,11 @@ img {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   // background-color: #ffffff; //цвет пунктов меню
-  border-top: 1px solid #e6e6e6; // полоски вдавленности
+  border-top: 1px solid #e6e6e6; // полоски 
   border-bottom: 1px solid #e6e6e6;
+  margin: -1px;
 
   &:hover {
     //измен цвета при наведении
@@ -280,11 +283,11 @@ img {
   }
 
   @media (min-width: $tablet-width) {
-    border-top: none; // полоски вдавленности
+    border-top: none; // полоски 
     border-bottom: none;
     height: 66px;
     padding: 12px 21px;
-  }
+}
   @media (min-width: $desktop-width) {
     height: 66px;
     padding: 12px 21px;
@@ -293,6 +296,40 @@ img {
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.site-list__item {
+   
+  @media (min-width: $tablet-width) {
+  &:last-child {
+    //у послед эл-а убираем отступ
+    margin-right: 0;
+  }
+  &--active {
+    //рисуем полоску активн меню
+   position: relative;
+    &::after {
+      content: "";
+      border-bottom: 3px solid #68B738;
+      position: absolute;
+      right: 20px;
+      bottom: 23px;
+      left: 20px;
+      height: 2px;
+      //background: #68B738
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  margin-right: 0;
+  &--active::after {
+    border-bottom: 3px solid #ffffff;
+   /*  background: #ffffff;
+    right: 30px;
+    left: 30px; */
+    }
   }
 }
 
@@ -384,8 +421,10 @@ img {
   }
 }
 
-.promo__programm {
+.promo__programm-button {
+  width: 100%;
   @media (min-width: $tablet-width) {
+    width: 244px;
     position: absolute;
     top: 235px;
     left: 4px;
@@ -601,10 +640,15 @@ img {
   &:hover {
     //измен цвета при наведении
     opacity: 0.6;
+    & img {
+     width: 62px;
+    }
   }
   &:active {
     opacity: 0.3;
   }
+
+  
 }
 
 .Howitworks {

@@ -58,6 +58,13 @@ img {
   line-height: 20px;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover {
+    background: #5EAA2F;
+  }
+ &:active {
+  color: rgba(255, 255, 255, 0.3);
+ }
 }
 
 .page {
@@ -271,9 +278,11 @@ img {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   // background-color: #ffffff; //цвет пунктов меню
   border-top: 1px solid #e6e6e6; // полоски вдавленности
   border-bottom: 1px solid #e6e6e6;
+  margin: -1px;
 
   &:hover {
     //измен цвета при наведении
@@ -300,6 +309,41 @@ img {
     margin: 0;
   }
 }
+
+.site-list__item {
+   
+  @media (min-width: $tablet-width) {
+  &:last-child {
+    //у послед эл-а убираем отступ
+    margin-right: 0;
+  }
+  &--active {
+    //рисуем полоску активн меню
+   position: relative;
+    &::after {
+      content: "";
+      border-bottom: 3px solid #68B738;
+      position: absolute;
+      right: 20px;
+      bottom: 23px;
+      left: 20px;
+      height: 2px;
+      //background: #68B738
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  margin-right: 0;
+  &--active::after {
+    border-bottom: 3px solid #68B738;
+   /*  background: #ffffff;
+    right: 30px;
+    left: 30px; */
+    }
+  }
+}
+
 //---------------------//
 
 .productCatalog__wrapper {

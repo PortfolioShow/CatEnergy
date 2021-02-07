@@ -9,7 +9,9 @@ img {
   height: auto;
 }
 //убирает подсветку во всех браузерах на input, select, button, a
-:active, :hover, :focus {
+:active,
+:hover,
+:focus {
   outline: 0;
   outline-offset: 0;
 }
@@ -24,10 +26,9 @@ input {
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-
     font-size: 20px;
     line-height: 30px;
-  } 
+  }
 }
 //-------------------------------
 
@@ -73,6 +74,12 @@ input {
   line-height: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  &:hover {
+    background: #5EAA2F;
+  }
+ &:active {
+  color: rgba(255, 255, 255, 0.3);
+ }
 }
 
 .page {
@@ -101,7 +108,7 @@ input {
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
-/*     outline: 1px solid blue;
+    /*     outline: 1px solid blue;
     outline-offset: -4px;
  */
     border: none;
@@ -124,7 +131,6 @@ input {
     //display: flex;
     flex-direction: column;
     margin: 0 20px;
-
   }
   @media (min-width: $tablet-width) {
     min-width: 767px;
@@ -132,9 +138,7 @@ input {
   }
   @media (min-width: $desktop-width) {
     margin: 0 110px;
-
   }
-
 }
 
 .page-header__wrapper {
@@ -144,9 +148,8 @@ input {
 }
 
 .page-header__logo {
-  
   //inline потому как img display:inline п.у.
- height: 85px;
+  height: 85px;
   //margin: auto;
   //margin-left: 30px;
 }
@@ -294,9 +297,11 @@ input {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   // background-color: #ffffff; //цвет пунктов меню
   border-top: 1px solid #e6e6e6; // полоски вдавленности
   border-bottom: 1px solid #e6e6e6;
+  margin: -1px;
 
   &:hover {
     //измен цвета при наведении
@@ -323,6 +328,43 @@ input {
     margin: 0;
   }
 }
+
+.site-list__item {
+   
+  @media (min-width: $tablet-width) {
+  &:last-child {
+    //у послед эл-а убираем отступ
+    margin-right: 0;
+  }
+  &--active {
+    //рисуем полоску активн меню
+   position: relative;
+    &::after {
+      content: "";
+      border-bottom: 3px solid #68B738;
+      position: absolute;
+      right: 20px;
+      bottom: 23px;
+      left: 20px;
+      height: 2px;
+      //background: #68B738
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  margin-right: 0;
+  &--active::after {
+    border-bottom: 3px solid #68B738;
+   /*  background: #ffffff;
+    right: 30px;
+    left: 30px; */
+    }
+  }
+}
+
+
+
 //---------------------//
 
 .programSelection__title {
@@ -331,18 +373,18 @@ input {
   font-size: 36px;
   line-height: 36px;
   color: #000000;
- // display: inline-block;
+  // display: inline-block;
   margin: 27px 41px 37px 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-  margin-bottom: 54px;
+    margin-bottom: 54px;
     margin-left: 29px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 53px  110px 56px;
+    margin: 53px 110px 56px;
   }
 }
 
@@ -350,25 +392,23 @@ input {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 37px 74px 39px 20px ;
+  margin: 37px 74px 39px 20px;
   width: 226px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-   line-height: 30px;
+    line-height: 30px;
 
-    margin: 0 70px 66px; 
+    margin: 0 70px 66px;
     width: 323px;
-
-
   }
 
   @media (min-width: $desktop-width) {
-  margin: 0 110px 66px;
+    margin: 0 110px 66px;
   }
 }
 
-.titlelline {
+/* .titlelline {
   position: relative;
   margin: 38px 0 56px;
 
@@ -381,9 +421,9 @@ input {
     margin: 69px 0 94px;
 
   }
-}
+} */
 
-.titleBox {
+/* .titleBox {
   position: absolute;
   font-size: 24px;
   line-height: 26px;
@@ -397,96 +437,180 @@ input {
     left: 30px;
     top: -24px;
   }
-
   @media (min-width: $desktop-width) {
     left: 70px;
     top: -24px;
   }
   /* outline: 1px solid blue;
-  outline-offset: -4px; */
-}
+  outline-offset: -4px; 
+} 
 
 .title {
-  // margin: 28px 0px 35px 19px;
-  background-color: #ffffff;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 26px;
-  text-align: left;
-  margin: 0;
-  padding-left: 21px;
-  padding-right: 22px;
-  display: inline-block;
+    // margin: 28px 0px 35px 19px;
+    background-color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: left;
+    margin: 0;
+    padding-left: 21px;
+    padding-right: 22px;
+    display: inline-block;
 
-
+    @media (min-width: $tablet-width) {
+      //  margin: 75px 110px 81px;
+      font-size: 36px;
+      line-height: 36px;
+      padding-left: 39px;
+      padding-right: 40px;
+      //  padding-right: 36px;
+    }
+    @media (min-width: $desktop-width) {
+      // margin: 75px 110px 81px;
+      padding: 0 40px;
+        // padding-right: 35px;
+    }
+  }
+*/
+/* .Comment__title {
+  margin: 38px 0 56px;
   @media (min-width: $tablet-width) {
-    //  margin: 75px 110px 81px;
-    font-size: 36px;
-    line-height: 36px;
-    padding-left: 39px;
-    padding-right: 40px;
-    //  padding-right: 36px;
+    margin: 65px 0 86px;
   }
   @media (min-width: $desktop-width) {
-    // margin: 75px 110px 81px;
-    padding: 0 40px;
+    margin: 69px 0 94px;
+  } 
+} */
+.title {
+  position: relative;
+  margin: 38px 0 56px;
+
+  @media (min-width: $tablet-width) {
+    margin: 65px 0 86px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 69px 0 94px;
+  }
+
+  &__box {
+    //div для заголовка
+
+    //  position: absolute;
+    font-size: 24px;
+    line-height: 26px;
+    width: 224px;
+    // margin-left: 0px;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      margin-left: 30px;
+      //left: 30px;
+      //top: -24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 70px;
+    }
+  }
+
+  &__text {
+    //заголовок
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: left;
+    margin: 0;
+    padding-left: 21px;
+    padding-right: 22px;
+    display: inline-block;
+    background-color: #ffffff;
+
+    @media (min-width: $tablet-width) {
+      //  margin: 75px 110px 81px;
+      font-size: 36px;
+      line-height: 36px;
+      padding-left: 39px;
+      padding-right: 40px;
+      //  padding-right: 36px;
+    }
+    @media (min-width: $desktop-width) {
+      // margin: 75px 110px 81px;
+      padding: 0 40px;
       // padding-right: 35px;
+    }
+  }
+}
+
+.title__line {
+  border-top: 3px solid green;
+  // margin-top:-14px;
+
+  position: relative;
+  z-index: -1;
+  top: -12px;
+  left: 0;
+}
+
+.contactDetails__title .title__line {
+  border-top: 3px solid green;
+  // margin-top:-14px;
+  position: relative;
+  z-index: -1;
+  top: -34px;
+  left: 0;
+  @media (min-width: $tablet-width) {
+    top: -12px;
   }
 }
 
 .formSelection__wrapper {
   display: block;
- //margin: 39px 20px 27px 20px ;
+  //margin: 39px 20px 27px 20px ;
   /* outline: 1px solid red;
   outline-offset: 2px; */
 
-
   @media (min-width: $tablet-width) {
-   // display: block;
-   // margin:0 auto;
+    // display: block;
+    // margin:0 auto;
     min-width: 630px;
-    margin: 0 71px ;
+    margin: 0 71px;
   }
 
   @media (min-width: $desktop-width) {
-  display: flex;
-  min-width: 1220px;
-  justify-content: space-between;
-  margin: 0 110px;
-  /* outline: 1px solid red;
+    display: flex;
+    min-width: 1220px;
+    justify-content: space-between;
+    margin: 0 110px;
+    /* outline: 1px solid red;
   outline-offset: 2px; */
-}
+  }
 }
 
 .formSelection__container {
-  
   border-bottom: 1px solid #cdcdcd;
   margin-bottom: 27px;
   padding: 0 20px;
-  
 
   /* outline: 1px solid blue;
   outline-offset: -2px; */
 
   @media (min-width: $tablet-width) {
     border: none;
-   min-width: 630px;
-   margin-bottom: 72px;
-   padding: 0;
-
-
+    min-width: 630px;
+    margin-bottom: 72px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
-  min-width: 569px;  
-  margin:0;
 
-}
+    min-width: 569px;
+    margin: 0;
+  }
 }
 
 .formSelection__form {
@@ -498,10 +622,18 @@ input {
 .inputForm__box {
   display: flex;
   margin: 0;
- // margin-bottom: 20px;
+  margin-bottom: 20px;
   // flex-wrap: nowrap;
   align-items: center;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0px;
+
+  }
 }
 
 .inputForm__label {
@@ -513,10 +645,9 @@ input {
   font-size: 16px;
   line-height: 18px;
   @media (min-width: $tablet-width) {
-
-  font-size: 20px;
-  line-height: 30px;
-}
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .inputForm__field {
@@ -528,7 +659,6 @@ input {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .formSelection__radio {
@@ -538,9 +668,9 @@ input {
 
   @media (min-width: $tablet-width) {
     border: 1px solid #cdcdcd;
- //  min-width: 630px;
-   margin: 0;
-   padding: 25px 28px 12px 25px;
+    //  min-width: 630px;
+    margin: 0;
+    padding: 25px 28px 12px 25px;
   }
   @media (min-width: $desktop-width) {
     margin-left: 80px;
@@ -548,37 +678,38 @@ input {
     display: flex;
     align-items: center;
     padding: 25px 0 14px 25px;
-    }
+  }
 }
-
 
 .formSelection__item {
- margin-bottom: 13px;
- align-items: center;
-    display: flex;
+  margin-bottom: 13px;
+  align-items: center;
+  display: flex;
 }
 
-.formSelection__input { // скрываем стандартный чекбокс
+.formSelection__input {
+  // скрываем стандартный чекбокс
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.formSelection__input + label  { //создаем нужный чекбокс
+.formSelection__input + label {
+  //создаем нужный чекбокс
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   user-select: none; //Текст элемента и его вложенных элементов не выбирается.
 }
 /* создание в label псевдоэлемента  before со следующими стилями */
-.formSelection__input + label::before  { 
+.formSelection__input + label::before {
   width: 30px;
   height: 30px;
-  content: '';
+  content: "";
   display: inline-block;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
   box-sizing: border-box;
   border-radius: 50%;
   margin-right: 20px;
@@ -587,30 +718,28 @@ input {
   background-size: 50% 50%;
 
   @media (min-width: $tablet-width) {
-
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
   }
-  }
+}
 /* стили при наведении курсора на радио */
-.formSelection__input:not(:checked) + label:hover::before {  
-  border-color: #BABABA;
- // border: 1px solid  red;
+.formSelection__input:not(:checked) + label:hover::before {
+  border-color: #bababa;
+  // border: 1px solid  red;
 }
 /* стили для активной радиокнопки (при нажатии на неё) */
-.formSelection__input:active + label:active {   
+.formSelection__input:active + label:active {
   opacity: 0.3;
 }
 
- /* стили для радиокнопки, находящейся в фокусе */
- .formSelection__input:focus + label::before { 
+/* стили для радиокнопки, находящейся в фокусе */
+.formSelection__input:focus + label::before {
   box-shadow: 0 0 0 0.2rem rgba(104, 183, 56, 0.25);
 }
 
-
 /* стили для радиокнопки, находящейся в состоянии checked */
 .formSelection__input:checked + label::before {
-  border-color: #BABABA;
+  border-color: #bababa;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4' fill='%2368B738'/%3e%3c/svg%3e");
 }
@@ -626,13 +755,10 @@ input {
   font-size: 16px;
   line-height: 18px;
   @media (min-width: $tablet-width) {
-
-  font-size: 20px;
-  line-height: 30px;
- 
+    font-size: 20px;
+    line-height: 30px;
   }
 }
-
 
 .contactDetails__container {
   margin: 0 20px;
@@ -640,22 +766,23 @@ input {
   @media (min-width: $tablet-width) {
     min-width: 630px;
     margin: 0 65px 0px 71px;
-   }
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-  min-width: 1220px;
-  margin: 0 110px 69px 110px;
+    min-width: 1220px;
+    margin: 0 110px 69px 110px;
   }
 }
 
 .contactDetails__telefon {
-  margin-left: 78px;
+  @media (min-width: $desktop-width) {
+    margin-left: 78px;
+  }
 }
 
 .CommentText {
-
   margin: 0 20px;
 
   @media (min-width: $tablet-width) {
@@ -689,16 +816,15 @@ input {
     min-width: 565px;
     display: flex;
     flex-wrap: wrap;
-
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  margin: 61px 110px;
-  max-width: 100%;
-  min-width: 1220px;
+    margin: 61px 110px;
+    max-width: 100%;
+    min-width: 1220px;
   }
 }
 
@@ -711,9 +837,8 @@ input {
     width: 46%;
   }
   @media (min-width: $desktop-width) {
-    margin:0 ;
+    margin: 0;
     width: auto;
-
   }
 }
 
@@ -725,7 +850,7 @@ input {
 }
 
 /*  */
-.additionally__input+label {
+.additionally__input + label {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -733,36 +858,34 @@ input {
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
-.additionally__input+label::before {
-
+.additionally__input + label::before {
   width: 26px;
   height: 26px;
-  content: '';
+  content: "";
   display: inline-block;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
   box-sizing: border-box;
- // border-radius: 0.25em;
+  // border-radius: 0.25em;
   margin-right: 19px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
 
   @media (min-width: $tablet-width) {
-
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 /* стили при наведении курсора на checkbox */
-.additionally__input:not(:checked)+label:hover::before {
-  border-color: #BABABA;
+.additionally__input:not(:checked) + label:hover::before {
+  border-color: #bababa;
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
-.additionally__input:active+label:active {
+.additionally__input:active + label:active {
   opacity: 0.3;
 }
 
@@ -772,21 +895,19 @@ input {
 } */
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox:focus:not(:checked)+label::before {
+.custom-checkbox:focus:not(:checked) + label::before {
   border-color: red;
   border: 3px solid red;
-
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.additionally__input:checked+label::before {
- // border-color: #0b76ef;
+.additionally__input:checked + label::before {
+  // border-color: #0b76ef;
   //background-color: #0b76ef;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2368B738' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .additionally__label {
-
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -797,10 +918,9 @@ input {
   font-weight: normal;
 
   @media (min-width: $tablet-width) {
-
-  font-size: 20px;
-  line-height: 30px;
-}
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .sendApplication {
@@ -813,16 +933,14 @@ input {
   /* outline: 1px solid green;
   outline-offset: -2px; */
 
-
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
     margin: 54px 67px 72px 71px;
-
   }
   @media (min-width: $desktop-width) {
-   // justify-content: flex-start;
-  margin: 61px 110px 82px;
-  min-width: 1220px;
+    // justify-content: flex-start;
+    margin: 61px 110px 82px;
+    min-width: 1220px;
   }
 }
 
@@ -842,9 +960,7 @@ input {
     padding: 13px 45px;
   }
   @media (min-width: $desktop-width) {
-
-  min-width: 568px;
-
+    min-width: 568px;
   }
 }
 
@@ -855,15 +971,15 @@ input {
   font-size: 14px;
   line-height: 16px;
 
-  margin: 21px 0 0 0; 
+  margin: 21px 0 0 0;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 16px;
-  
-  margin-left: 81px;
-  min-width: 179px;
-}
+
+    margin-left: 81px;
+    min-width: 179px;
+  }
 }
 //-------*****************-------------
 

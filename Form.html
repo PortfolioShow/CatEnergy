@@ -26,9 +26,9 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <!-- main-nav__list для позиционир site-list для эл-ов меню-->
-              <li class="site-list__item site-list__item--active"><a href="/index.html">ГЛАВНАЯ</a></li>
+              <li class="site-list__item "><a href="/index.html">ГЛАВНАЯ</a></li>
               <li class="site-list__item"><a href="/Catalog.html"> каталог продукции</a></li>
-              <li class="site-list__item"><a href="Form.html"> подбор программы </a></li>
+              <li class="site-list__item site-list__item--active"><a href="Form.html"> подбор программы </a></li>
             </ul>
           </div>
         </nav>
@@ -77,12 +77,16 @@
       </section>
 
       <section class="contactDetails">
-        <div class="contactDetails__line titlelline">
-          <div class="contactDetails__title titleBox">
-            <h2 class="contactDetails__title title">Контактные данные (владельца кота)</h2>
+        <div class="contactDetails__title">
+          <div class="title">
+            <div class="title__box">
+              <h2 class="title__text">Контактные данные (владельца кота)</h2>
+            </div>
+            <div class="title__line"> </div> <!-- зеленая полоска margin-top:-px; -->
           </div>
-        </div>
-        <div class="contactDetails__container">
+          </div>
+
+          <div class="contactDetails__container">
             <p class="contactDetails__email inputForm__box">
               <label class="inputForm__label" for="Email">E-mail:*</label>
               <input class="inputForm__field" id="Email" name="Email" type="text" placeholder="E-mail" />
@@ -95,22 +99,30 @@
       </section>
 
       <section class="Comment">
-        <div class="Comment__line titlelline">
-          <div class="Comment-title__block titleBox">
-            <h2 class="Comment__title title">Коментарий</h2>
+        <div class="Comment__title ">
+          <div class="title"> <!-- Comment__line -->
+           <div class="title__box"> <!-- bacground #fff--> 
+            <h2 class="title__text">Коментарий</h2>
+           </div>
+           <div class="title__line"> </div> <!-- зеленая полоска margin-top:-px; -->
           </div>
-        </div>
+      </div>
+
         <div class="CommentText">
             <textarea class="CommentText__field" name="Коментарий" id="Comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
       </section>
 
       <section class="additionally">
-        <div class="additionally__line titlelline">
-          <div class="additionallyTitle__block titleBox">
-            <h2 class="additionally__title title">Дополнительно</h2>
+        <div class="additionally__title">
+          <div class="title">
+            <div class="title__box">
+              <h2 class="title__text">Дополнительно</h2>
+            </div>
+            <div class="title__line"> </div> <!-- зеленая полоска margin-top:-px; -->
           </div>
         </div>
+
         <div class="additionally__container">
           <p class="additionally__box">
             <input class="additionally__input" type="checkbox" name="Сахарозаменитель" id="sweetener"  />
